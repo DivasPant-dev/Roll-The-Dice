@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            background-color: black;
+        }
+
+        img {
+            height: 350px;
+        }
+
+        .btn {
+            padding: 20px 40px;
+            border: none;
+            background-color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/dice1.png" alt="Image of a Dice">
+    <button class="btn" onclick="rollDice()">
+        Roll Dice
+    </button>
+
+
+    <script>
+        const img = document.querySelector("img");
+
+        function rollDice() {
+            const randomNum = Math.floor(Math.random() * 6 + 1);
+            img.src = `./images/dice${randomNum}.png`;
+        }
+    </script>
+</body>
+</html>
